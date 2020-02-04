@@ -1,0 +1,38 @@
+{
+    "signalServerURI": "ws://127.0.0.1:5000/ss",
+    "peerName": "gopher",
+    "peerNamePrefix": "ROBOT",
+    "streamVideo": true,
+    "streamAudio": true,
+    "video":{
+        "deviceID": "0",
+        "width": 640,
+        "height": 480,
+        "frameRate": 30,
+        "encoderName":"VP8"
+    },
+    "audio":{
+        "sampleRate": 48000,
+        "channels": 2,
+        "latency": 0.02,
+        "encoderName": "OPUS"
+    },
+    "iceServers":[
+        {
+            "urls": [
+                "stun:stun.l.google.com:19302",
+                "stun:stun1.l.google.com:19302"
+            ] 
+        },
+        {
+            "urls": ["turn:192.158.29.39:3478?transport=udp"],
+            "credential": "JZEOEt2V3Qb0y27GRntt2u2PAYA=",
+            "username": "28224511:1379330808"
+        },
+        {
+            "urls": ["turn:192.158.29.39:3478?transport=tcp"],
+            "credential": "JZEOEt2V3Qb0y27GRntt2u2PAYA=",
+            "username": "28224511:1379330808"
+        }
+    ]
+}
